@@ -1,3 +1,30 @@
+# Difference from the original
+**I add Pangolin folder on official [ORB_SLAM2](https://github.com/raulmur/ORB_SLAM2) using [Pangolin 0.5 version](https://github.com/stevenlovegrove/Pangolin/releases/tag/v0.5).** 
+
+Enter Pangolin path
+```bash
+cd ~/ORB_SLAM2/Pangolin-0.5
+```
+Build Pangolin
+```bash
+mkdir build
+cd build
+cmake ..
+make -j
+```
+Test Examples
+```bash
+cd ~/ORB_SLAM2/Pangolin-0.5/examples/HelloPangolin
+mkdir build
+cd build
+cmake ..
+make -j
+./HelloPangolin
+```
+
+---
+
+
 # ORB-SLAM2
 **Authors:** [Raul Mur-Artal](http://webdiis.unizar.es/~raulmur/), [Juan D. Tardos](http://webdiis.unizar.es/~jdtardos/), [J. M. M. Montiel](http://webdiis.unizar.es/~josemari/) and [Dorian Galvez-Lopez](http://doriangalvez.com/) ([DBoW2](https://github.com/dorian3d/DBoW2))
 
