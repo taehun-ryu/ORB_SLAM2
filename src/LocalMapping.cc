@@ -19,9 +19,22 @@
 */
 
 #include "LocalMapping.h"
+#include <unistd.h>
+#include <math.h>
+#include <stddef.h>
+#include <algorithm>
+#include <iostream>
+#include <map>
+#include <memory>
+#include <utility>
+#include <vector>
 #include "LoopClosing.h"
 #include "ORBmatcher.h"
 #include "Optimizer.h"
+#include <unistd.h>
+#include "KeyFrame.h"
+#include "Map.h"
+#include "MapPoint.h"
 
 #include<mutex>
 

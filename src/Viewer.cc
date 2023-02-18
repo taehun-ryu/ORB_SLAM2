@@ -20,6 +20,15 @@
 
 #include "Viewer.h"
 #include <pangolin/pangolin.h>
+// #include <pangolin/pangolin.h>
+#include <unistd.h>
+#include <GL/glew.h>
+#include <opencv2/core.hpp>
+#include <opencv2/highgui.hpp>
+
+#include "FrameDrawer.h"
+#include "MapDrawer.h"
+#include "System.h"
 
 #include <mutex>
 
@@ -87,7 +96,8 @@ void Viewer::Run()
     pangolin::OpenGlMatrix Twc;
     Twc.SetIdentity();
 
-    cv::namedWindow("ORB-SLAM2: Current Frame");
+    cv::namedWindow("ORB-SLAM2: Current Frame", cv::WINDOW_NORMAL); //
+    //cv::namedWindow("ORB-SLAM2: Current Frame");
 
     bool bFollow = true;
     bool bLocalizationMode = false;
@@ -125,7 +135,8 @@ void Viewer::Run()
         }
 
         d_cam.Activate(s_cam);
-        glClearColor(1.0f,1.0f,1.0f,1.0f);
+        glClearColor(0.0f,0.0f,0.0f,1.0f);
+        //glClearColor(1.0f,1.0f,1.0f,1.0f);
         mpMapDrawer->DrawCurrentCamera(Twc);
         if(menuShowKeyFrames || menuShowGraph)
             mpMapDrawer->DrawKeyFrames(menuShowKeyFrames,menuShowGraph);

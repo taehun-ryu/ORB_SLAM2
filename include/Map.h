@@ -24,7 +24,7 @@
 #include "MapPoint.h"
 #include "KeyFrame.h"
 #include <set>
-
+#include <vector>
 #include <mutex>
 
 

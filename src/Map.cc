@@ -19,6 +19,8 @@
 */
 
 #include "Map.h"
+#include "KeyFrame.h"
+#include "MapPoint.h"
 
 #include<mutex>
 
