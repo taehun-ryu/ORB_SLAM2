@@ -21,6 +21,7 @@ cmake ..
 make -j
 ./HelloPangolin
 ```
+**Also, I rewrite most of the code with reference to [this repo](https://github.com/RAFALAMAO/ORB_SLAM2_NOETIC) to install ORB-SLAM2 in Ubuntu20.04**
 
 ---
 
